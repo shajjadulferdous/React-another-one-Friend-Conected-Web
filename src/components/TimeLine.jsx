@@ -6,7 +6,7 @@ import NoActivity from './NoActivity';
 
 const TimeLine = () => {
     const {timeline} = useContext(ConnectionConext);
-    console.log(timeline);
+    // console.log(timeline);
    
     const [filterValue , setFilterValue] = useState('none');
     let filterData = null;
@@ -35,9 +35,9 @@ const TimeLine = () => {
                     filterData.map((d , index) => <TimeLineCard key={index} d={d}></TimeLineCard>)
                 } 
              </div>
-             :  <>
+             :  <div className=''>
                 <NoActivity></NoActivity>
-            </>
+            </div>
          }  
         </div>
     );

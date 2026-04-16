@@ -4,6 +4,7 @@ import Home from "../components/Home"
 import FriendDetails from "../components/FriendDetails"
 import TimeLine from "../components/TimeLine"
 import StatisPage from "../components/StatisPage"
+import ErrorPage from "../components/ErrorPage"
 const router = createBrowserRouter([
      {
        path:'/',
@@ -29,7 +30,10 @@ const router = createBrowserRouter([
 
          }
        ]
-      
+     },
+     {
+        path:"*",
+        Component:ErrorPage
      }
 ])
 export {router}
