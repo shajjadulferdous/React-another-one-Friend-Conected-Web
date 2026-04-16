@@ -20,7 +20,7 @@ const Navbar = () => {
                     <IoMdHome />
                     Home</NavLink></li>
                  <li><NavLink to={`/timeline`}> <IoTimeOutline /> Timeline</NavLink></li>
-                 <li><NavLink> <ImStatsDots /> Stats</NavLink></li>
+                 <li><NavLink to={'/analysis'}> <ImStatsDots /> Stats</NavLink></li>
                 </ul>
             </div>
             </div>

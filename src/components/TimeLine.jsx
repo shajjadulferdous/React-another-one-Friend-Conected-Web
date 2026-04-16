@@ -1,15 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { ConnectionConext } from '../Context/ConnectionContext';
 import { Link } from 'react-router';
+import TimeLineCard from './TimeLineCard';
+import NoActivity from './NoActivity';
 
 const TimeLine = () => {
     const {timeline} = useContext(ConnectionConext);
     console.log(timeline);
-    // if ( timeline.length == 0){
-    //     return (
-           
-    //     )
-    // }
+   
     const [filterValue , setFilterValue] = useState('none');
     let filterData = null;
     if ( filterValue != 'none'){
@@ -30,30 +28,17 @@ const TimeLine = () => {
                 <li ><Link onClick={()=>setFilterValue('video')}>Video</Link></li>
             </ul>
             </div>
-            {filterData.length ? 
+            {
+            filterData.length ? 
             <div className='space-y-6'>
                 {
-                    filterData.map((d , index) => <div key={index} className='text-[#64748B] flex p-4 gap-4 shadow-sm '>
-                        <div>
-                            <img src={d.icon} alt="" />
-                        </div>
-                        <div>
-                            <h1> <span className='font-bold text-black'>{d.type.charAt(0).toUpperCase()+ d.type.slice(1)}</span> with {d.name}</h1>
-                            <p>{d.date.toLocaleDateString("en-US", {
-                                month: "long",
-                                day: "numeric",
-                                year: "numeric"
-                            })}</p>
-                        </div>
-                    </div>)
+                    filterData.map((d , index) => <TimeLineCard key={index} d={d}></TimeLineCard>)
                 } 
-            </div> :  <>
-                <div className='flex justify-center items-center mt-30'>
-                    <img src={`/no_activity.webp`} className='w-40 h-40' alt="" />
-                </div>
-                <h1 className='font-bold text-center text-5xl mb-30'>No Activity Found</h1>
+             </div>
+             :  <>
+                <NoActivity></NoActivity>
             </>
-         }
+         }  
         </div>
     );
 };

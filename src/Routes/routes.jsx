@@ -3,6 +3,7 @@ import MainLayout from "../Layout/MainLayout"
 import Home from "../components/Home"
 import FriendDetails from "../components/FriendDetails"
 import TimeLine from "../components/TimeLine"
+import StatisPage from "../components/StatisPage"
 const router = createBrowserRouter([
      {
        path:'/',
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
          {
             path:'/timeline',
             Component:TimeLine
+         },
+         {
+           path:'/analysis',
+           Component:StatisPage
+
          }
        ]
       
