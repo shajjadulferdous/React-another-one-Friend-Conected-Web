@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Ahmed",
+    "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+    "email": "sarah.ahmed@example.com",
+    "days_since_contact": 5,
+    "status": "On track",
+    "tags": ["office", "teammate"],
+    "bio": "Work colleague from my first job. Always helpful and kind.",
+    "goal": 10,
+    "next_due_date": "Jul 18, 2025"
+  },
+  {
+    "id": 2,
+    "name": "Michael Chen",
+    "picture": "https://randomuser.me/api/portraits/men/3.jpg",
+    "email": "michael.chen@example.com",
+    "days_since_contact": 20,
+    "status": "Overdue",
+    "tags": ["gym", "fitness"],
+    "bio": "Gym partner who motivates me to stay consistent.",
+    "goal": 7,
+    "next_due_date": "Jul 15, 2025"
+  },
+  {
+    "id": 3,
+    "name": "Ayesha Rahman",
+    "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "email": "ayesha.rahman@example.com",
+    "days_since_contact": 2,
+    "status": "Almost Due",
+    "tags": ["family", "cousin"],
+    "bio": "My cousin. We talk regularly about family and life.",
+    "goal": 7,
+    "next_due_date": "Jul 22, 2025"
+  },
+  {
+    "id": 4,
+    "name": "David Miller",
+    "picture": "https://randomuser.me/api/portraits/men/5.jpg",
+    "email": "david.miller@example.com",
+    "days_since_contact": 15,
+    "status": "Overdue",
+    "tags": ["project", "freelance"],
+    "bio": "Worked together on freelance projects. Great developer.",
+    "goal": 10,
+    "next_due_date": "Jul 17, 2025"
+  },
+  {
+    "id": 5,
+    "name": "Nusrat Jahan",
+    "picture": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 7,
+    "status": "On track",
+    "tags": ["best friend"],
+    "bio": "Best friend from school days. Shares everything.",
+    "goal": 14,
+    "next_due_date": "Jul 21, 2025"
+  },
+  {
+    "id": 6,
+    "name": "Rahim Uddin",
+    "picture": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "email": "rahim.uddin@example.com",
+    "days_since_contact": 18,
+    "status": "Overdue",
+    "tags": ["neighbor"],
+    "bio": "Neighbor and childhood friend. Plays cricket together.",
+    "goal": 10,
+    "next_due_date": "Jul 16, 2025"
+  },
+  {
+    "id": 7,
+    "name": "Emily Johnson",
+    "picture": "https://randomuser.me/api/portraits/women/8.jpg",
+    "email": "emily.johnson@example.com",
+    "days_since_contact": 3,
+    "status": "Almost Due",
+    "tags": ["online", "developer"],
+    "bio": "Met through an online dev community. Love discussing tech.",
+    "goal": 7,
+    "next_due_date": "Jul 23, 2025"
+  },
+  {
+    "id": 8,
+    "name": "Tanvir Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/9.jpg",
+    "email": "tanvir.hasan@example.com",
+    "days_since_contact": 9,
+    "status": "On track",
+    "tags": ["university"],
+    "bio": "University friend. We used to study together before exams.",
+    "goal": 10,
+    "next_due_date": "Jul 19, 2025"
+  },
+  {
+    "id": 9,
+    "name": "Priya Sen",
+    "picture": "https://randomuser.me/api/portraits/women/10.jpg",
+    "email": "priya.sen@example.com",
+    "days_since_contact": 25,
+    "status": "Overdue",
+    "tags": ["old friend"],
+    "bio": "School friend. Haven’t talked in a while but still close.",
+    "goal": 14,
+    "next_due_date": "Jul 14, 2025"
+  },
+  {
+    "id": 10,
+    "name": "Arif Mahmud",
+    "picture": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "email": "arif.mahmud@example.com",
+    "days_since_contact": 1,
+    "status": "On track",
+    "tags": ["co-founder"],
+    "bio": "Working together on a startup idea. Very ambitious.",
+    "goal": 5,
+    "next_due_date": "Jul 24, 2025"
+  }
+]
