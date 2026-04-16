@@ -5,6 +5,11 @@ import { Link } from 'react-router';
 const TimeLine = () => {
     const {timeline} = useContext(ConnectionConext);
     console.log(timeline);
+    // if ( timeline.length == 0){
+    //     return (
+           
+    //     )
+    // }
     const [filterValue , setFilterValue] = useState('none');
     let filterData = null;
     if ( filterValue != 'none'){
@@ -25,6 +30,7 @@ const TimeLine = () => {
                 <li ><Link onClick={()=>setFilterValue('video')}>Video</Link></li>
             </ul>
             </div>
+            {filterData.length ? 
             <div className='space-y-6'>
                 {
                     filterData.map((d , index) => <div key={index} className='text-[#64748B] flex p-4 gap-4 shadow-sm '>
@@ -40,8 +46,14 @@ const TimeLine = () => {
                             })}</p>
                         </div>
                     </div>)
-                }
-            </div>
+                } 
+            </div> :  <>
+                <div className='flex justify-center items-center mt-30'>
+                    <img src={`/no_activity.webp`} className='w-40 h-40' alt="" />
+                </div>
+                <h1 className='font-bold text-center text-5xl mb-30'>No Activity Found</h1>
+            </>
+         }
         </div>
     );
 };
