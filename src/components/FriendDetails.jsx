@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { MdNotificationsPaused } from "react-icons/md";
 import { FiArchive } from "react-icons/fi";
@@ -6,14 +6,16 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { IoCallOutline } from "react-icons/io5";
 import { FaRegMessage } from "react-icons/fa6";
 import { CiVideoOn } from "react-icons/ci";
+import { ConnectionConext } from '../Context/ConnectionContext';
 
 const FriendDetails = () => {
     const {userId} = useParams();
-    console.log(userId);
+    // console.log(userId);
     const friends = useLoaderData();
     const user = friends.find( f => f.id == userId);
-    console.log(user)
+    // console.log(user)
     const {picture , name , status , tags , bio , email,days_since_contact , goal , next_due_date} = user;
+    const {handleCommunication} = useContext(ConnectionConext);
     return (
         <div className='flex w-12/16 mx-auto gap-6 my-20'>
              <div className='space-y-4'>
@@ -72,20 +74,20 @@ const FriendDetails = () => {
                         <h1 className='font-bold'>Relationship Goal</h1>
                         <button className='btn'>Edit</button>
                     </div>
-                    <div>Connect every <span className='font-bold'>30 days</span></div>
+                    <div>Connect every <span className='font-bold'>{goal} days</span></div>
                 </div>
                 <div className='shadow-sm p-4'>
-                    <h1>Quick Check-In</h1>
+                    <h1 className='mb-4'>Quick Check-In</h1>
                     <div className='grid justify-between grid-cols-3 gap-3'>
-                        <div className='btn py-16 w-full flex flex-row'>
+                        <div className='btn py-16 w-full flex flex-row' onClick={()=>handleCommunication('call',name)}>
                             <div> <IoCallOutline className='w-8 h-8'/></div>
                             <div className='text-[18px]'>Call</div>
                         </div>
-                        <div className='btn py-16 w-full flex flex-row'>
+                        <div className='btn py-16 w-full flex flex-row' onClick={()=>handleCommunication('text',name)}>
                             <FaRegMessage className='w-8 h-8'/>
                             <div className='text-[18px]'>Text</div>
                         </div>
-                        <div className='btn py-16'>
+                        <div className='btn py-16' onClick={()=>handleCommunication('video',name)}>
                             <CiVideoOn className='w-8 h-8'/>
                             <div className='text-[18px]'>Video</div>
                         </div>

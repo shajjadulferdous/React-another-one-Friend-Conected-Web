@@ -16,7 +16,7 @@ const Home = () => {
                <div className='font-semibold text-2xl mb-4'>
                   Your Friend
                </div>
-               <div className='grid grid-cols-4 gap-6'>
+               <div className='grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                    {
                      data.map(value => <SmallCard key={value.id} details={value}></SmallCard>)
                    }

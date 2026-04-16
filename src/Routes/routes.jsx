@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router"
 import MainLayout from "../Layout/MainLayout"
 import Home from "../components/Home"
 import FriendDetails from "../components/FriendDetails"
+import TimeLine from "../components/TimeLine"
 const router = createBrowserRouter([
      {
        path:'/',
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
              path:'/friend/:userId',
              loader:()=>fetch('/data.json'),
              Component:FriendDetails
+         },
+         {
+            path:'/timeline',
+            Component:TimeLine
          }
        ]
       
