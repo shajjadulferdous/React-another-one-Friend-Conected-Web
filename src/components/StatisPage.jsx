@@ -8,12 +8,12 @@ const StatisPage = () => {
     const {analysis , timeline} = useContext(ConnectionConext);
    
     return (
-         <div className='w-12/16 mx-auto my-20'>
+         <div className='w-14/15 md:w-12/16 mx-auto my-20'>
               <h1 className='text-5xl font-bold'>Friendship Analytics</h1>
               {
                 timeline.length == 0 ? <NoActivity></NoActivity> : <div className='flex justify-center items-center'>
                       <PieChart
-                style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }}
+                style={{ width: '100%', maxWidth: '600px', maxHeight: '80vh', aspectRatio: 1 }}
                 responsive
                 margin={{
                     top: 50,
@@ -26,8 +26,8 @@ const StatisPage = () => {
                 data={analysis}
                 cx="50%"
                 cy="50%"
-                innerRadius="60%"
-                outerRadius="80%"
+                innerRadius="80%"
+                outerRadius="100%"
                 dataKey="value"
                 >
                 {

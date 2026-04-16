@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className='bg-[#244D3F] text-center'>
-            <div className='pt-20 pb-10 space-y-4   w-12/16 mx-auto'>
+            <div className='pt-20 pb-10 space-y-4 '>
                 <h1 className='font-bold text-6xl text-white'>KeenKeeper</h1>
                 <p className='text-white opacity-80'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <p className='text-white text-xl leading-7'>Social Links</p>

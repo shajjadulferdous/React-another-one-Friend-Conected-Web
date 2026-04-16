@@ -17,7 +17,8 @@ const FriendDetails = () => {
     const {picture , name , status , tags , bio , email,days_since_contact , goal , next_due_date} = user;
     const {handleCommunication} = useContext(ConnectionConext);
     return (
-        <div className='flex w-12/16 mx-auto gap-6 my-20'>
+        <div className='flex mx-auto w-15/16 md:w-12/16  gap-6 my-20 flex-col md:flex-row'>
+
              <div className='space-y-4'>
                 <div className='p-8 space-y-3 shadow-md'>
                 <div className="flex items-center justify-center">
@@ -53,8 +54,9 @@ const FriendDetails = () => {
                 Delete
             </div>
              </div>
+
             <div className='space-y-6'>
-                <div className='grid grid-cols-3 text-center gap-6 '>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 text-center gap-6 '>
                     <div className='p-8 shadow-sm w-full'>
                         <h1 className='font-semibold text-3xl'>{days_since_contact}</h1>
                         <span className='text-[#64748B]'>Days Since Contact</span>
@@ -78,22 +80,23 @@ const FriendDetails = () => {
                 </div>
                 <div className='shadow-sm p-4'>
                     <h1 className='mb-4'>Quick Check-In</h1>
-                    <div className='grid justify-between grid-cols-3 gap-3'>
-                        <div className='btn py-16 w-full flex flex-row' onClick={()=>handleCommunication('call',name)}>
+                    <div className='grid justify-between grid-cols-2 lg:grid-cols-3 gap-3'>
+                        <div className='btn bg-base-200 py-16 flex justify-center items-center flex-col' onClick={()=>handleCommunication('call',name)}>
                             <div> <IoCallOutline className='w-8 h-8'/></div>
                             <div className='text-[18px]'>Call</div>
                         </div>
-                        <div className='btn py-16 w-full flex flex-row' onClick={()=>handleCommunication('text',name)}>
-                            <FaRegMessage className='w-8 h-8'/>
+                        <div className=' btn bg-base-200 py-16 flex justify-center items-center flex-col' onClick={()=>handleCommunication('text',name)}>
+                            <div><FaRegMessage className='w-8 h-8'/></div>
                             <div className='text-[18px]'>Text</div>
                         </div>
-                        <div className='btn py-16' onClick={()=>handleCommunication('video',name)}>
-                            <CiVideoOn className='w-8 h-8'/>
+                        <div className=' btn  py-16 flex justify-center items-center flex-col' onClick={()=>handleCommunication('video',name)}>
+                            <div><CiVideoOn className='w-8 h-8'/></div>
                             <div className='text-[18px]'>Video</div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
