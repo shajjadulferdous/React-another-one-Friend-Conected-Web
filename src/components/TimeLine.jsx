@@ -17,8 +17,8 @@ const TimeLine = () => {
     }
     
     return (
-        <div className='w-12/16 mx-auto my-20'>
-            <h1 className='text-5xl font-bold mb-6'>Timeline</h1>
+        <div className='w-11/12 sm:w-12/16 mx-auto my-20'>
+            <h1 className='text-4xl sm:text-5xl font-bold mb-6'>Timeline</h1>
             <div className="dropdown my-6">
             <div tabIndex={0} role="button" className="btn ">Filter timeline</div>
             <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">

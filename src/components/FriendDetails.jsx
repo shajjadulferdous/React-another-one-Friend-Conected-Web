@@ -17,7 +17,7 @@ const FriendDetails = () => {
     const {picture , name , status , tags , bio , email,days_since_contact , goal , next_due_date} = user;
     const {handleCommunication} = useContext(ConnectionConext);
     return (
-        <div className='flex mx-auto w-15/16 md:w-12/16  gap-6 my-20 flex-col md:flex-row'>
+        <div className='flex mx-auto w-11/12 md:w-12/16  gap-6 my-20 flex-col md:flex-row'>
 
              <div className='space-y-4'>
                 <div className='p-8 space-y-3 shadow-md'>

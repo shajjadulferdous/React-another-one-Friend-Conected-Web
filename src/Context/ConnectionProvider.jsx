@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ConnectionConext } from './ConnectionContext';
+import { toast } from 'react-toastify';
 
 const ConnectionProvider = ({children}) => {
     const [timeline , setTimeline] = useState([]);
@@ -23,6 +24,7 @@ const ConnectionProvider = ({children}) => {
              return item;
           })
           setAnalysis(updateAnalysis);
+          toast.success(` ${type.charAt(0).toUpperCase()+type.slice(1)} with ${name}`)
           setTimeline([...timeline , value]);
     }
 

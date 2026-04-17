@@ -5,25 +5,48 @@ import { IoTimeOutline } from "react-icons/io5";
 import { ImStatsDots } from "react-icons/im";
 
 const Navbar = () => {
-    return (
-       <>
-         <div className="flex w-full bg-base-100 shadow-sm py-3">
-            <div className="flex-1">
-                <Link className="btn btn-ghost   gap-0">
-                     <span className='font-extrabold text-2xl'>Keen</span>
-                     <span className='text-[#244D3F] text-2xl font-semibold'>Keeper</span>
-                </Link>
-            </div>
-            <div className="flex-none pt-2">
-                <ul className="flex pr-3 gap-4 md:gap-8">
-                 <li><NavLink to={'/'} className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`}>
+    const links = <>
+           <li><NavLink to={'/'} className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`}>
                     <IoMdHome />
                     Home</NavLink></li>
                  <li><NavLink className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`} to={`/timeline`}> <IoTimeOutline /> Timeline</NavLink></li>
                  <li><NavLink className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`} to={'/analysis'}> <ImStatsDots /> Stats</NavLink></li>
+         </>
+    return (
+       <>
+         {/* <div className="flex w-full bg-base-100 shadow-sm py-3">
+            <div className="flex-1">
+                
+            </div>
+            <div className="flex-none pt-2">
+                <ul className="flex pr-3 gap-4 md:gap-8">
+               
                 </ul>
             </div>
-         </div>
+         </div> */}
+         <div className="navbar bg-base-100 shadow-sm">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <div tabIndex={0} role="button" className="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabIndex="-1"
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        {links}
+      </ul>
+    </div>
+    <Link className="btn btn-ghost   gap-0">
+            <span className='font-extrabold text-2xl'>Keen</span>
+            <span className='text-[#244D3F] text-2xl font-semibold'>Keeper</span>
+    </Link>
+  </div>
+  <div className="navbar-end hidden sm:flex">
+    <ul className="menu menu-horizontal px-1">
+      {links}
+    </ul>
+  </div>
+</div>
        </>
     );
 };
