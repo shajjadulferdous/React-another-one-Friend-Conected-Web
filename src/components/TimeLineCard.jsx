@@ -3,7 +3,7 @@ import React from 'react';
 const TimeLineCard = ({d}) => {
     return (
         <div>
-            <div className='text-[#64748B] flex p-4 gap-4 shadow-sm rounded-md'>
+            <div className='text-[#64748B] flex p-4 gap-4 shadow-sm rounded-md transition-all duration-300 hover:-translate-y-0.5'>
                     <div>
                         <img src={d.icon} alt="" />
                     </div>

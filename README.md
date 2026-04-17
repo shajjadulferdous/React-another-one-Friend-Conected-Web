@@ -1,16 +1,66 @@
-# React + Vite
+# 🚀 Meetup Your Circle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Meetup Your Circle** is a social interaction web application where users can explore their friends, interact with them, and track communication activities in a clean and intuitive interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
+[Click here to see](https://ferdouskeenkeep.netlify.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Features
 
-## Expanding the ESLint configuration
+### 👥 Friend List
+- View a list of all friends
+- Click on a friend to navigate to their profile page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 📄 Friend Details Page
+- Displays detailed information about a selected friend
+- Includes three interactive actions:
+  - 💬 Text  
+  - 📞 Call  
+  - 🎥 Video  
+
+---
+
+### 🔔 Activity Actions
+- Clicking any action:
+  - Shows a toast notification (via **React Toastify**)
+  - Stores the activity in timeline  
+
+---
+
+### 🕒 Timeline Section
+- Displays history of all interactions
+- Filter activities by:
+  - 📞 Calls
+  - 💬 Texts
+  - 🎥 Videos
+
+---
+
+### 📊 Statistics Page
+- Visual representation of activity using charts
+- Shows total count of:
+  - Calls
+  - Texts
+  - Videos
+- Built using **Recharts**
+
+---
+
+## 🛠️ Technologies Used
+
+- ⚛️ React
+- 🔀 React Router
+- 🔔 React Toastify
+- 🎨 Tailwind CSS
+- 🌼 DaisyUI
+- 🎯 React Icons
+- 📊 Recharts
+
+---
+

@@ -27,7 +27,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <Link className="btn btn-ghost   gap-0">
+    <Link to={'/'} className="btn btn-ghost   gap-0">
             <span className='font-extrabold text-2xl'>Keen</span>
             <span className='text-[#244D3F] text-2xl font-semibold'>Keeper</span>
     </Link>

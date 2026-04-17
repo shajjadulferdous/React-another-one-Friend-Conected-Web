@@ -19,14 +19,15 @@ const TimeLine = () => {
     return (
         <div className='w-11/12 sm:w-12/16 mx-auto my-20'>
             <h1 className='text-4xl sm:text-5xl font-bold mb-6'>Timeline</h1>
-            <div className="dropdown my-6">
-            <div tabIndex={0} role="button" className="btn ">Filter timeline</div>
-            <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                <li ><Link onClick={()=>setFilterValue('none')}>None</Link></li>
-                <li> <Link onClick={()=>setFilterValue('text')}>Text</Link></li>
-                <li ><Link onClick={()=>setFilterValue('call')}>Call</Link></li>
-                <li ><Link onClick={()=>setFilterValue('video')}>Video</Link></li>
-            </ul>
+          
+            <div>   
+                <select defaultValue="Filter Timeline" className="select select-ghost outline-gray-200 outline-2 my-6">
+                <option disabled selected>Filter Timeline</option>
+                <option onClick={()=>setFilterValue('none')}>Reset</option>
+                <option onClick={()=>setFilterValue('text')}>Text</option>
+                <option onClick={()=>setFilterValue('call')}>Call</option>
+                <option  onClick={()=>setFilterValue('video')}>Video</option>
+                </select>
             </div>
             {
             filterData.length ? 

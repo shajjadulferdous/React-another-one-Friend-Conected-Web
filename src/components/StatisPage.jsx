@@ -8,11 +8,13 @@ const StatisPage = () => {
     const {analysis , timeline} = useContext(ConnectionConext);
    
     return (
-         <div className='w-11/12 md:w-12/16 mx-auto my-20'>
+         <div className='w-11/12  md:w-12/16 mx-auto my-20'>
               <h1 className='text-4xl sm:text-5xl font-bold'>Friendship Analytics</h1>
               {
-                timeline.length == 0 ? <NoActivity></NoActivity> : <div className='flex justify-center items-center'>
-                      <PieChart
+                timeline.length == 0 ? <NoActivity></NoActivity> : <div  className='shadow-sm'>
+                    <p className='p-4'>By Interaction Type</p>
+                     <div className='flex justify-center items-center p-4'>
+                    <PieChart
                 style={{ width: '100%', maxWidth: '600px', maxHeight: '80vh', aspectRatio: 1 }}
                 responsive
                 margin={{
@@ -38,7 +40,7 @@ const StatisPage = () => {
                     } else if (entry.name === "call") {
                         color = 'red';
                     } else{
-                        color ='black';
+                        color ='#244D3F';
                     }
                     return <Cell key={`cell-${index}`} fill={color} />;
                     })
@@ -48,6 +50,7 @@ const StatisPage = () => {
                 <Legend></Legend>
                 </PieChart>
                 </div>
+             </div>
             }
         </div>
     );

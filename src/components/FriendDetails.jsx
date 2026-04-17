@@ -57,15 +57,15 @@ const FriendDetails = () => {
 
             <div className='space-y-6'>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 text-center gap-6 '>
-                    <div className='p-8 shadow-sm w-full'>
+                    <div className='p-8 shadow-sm w-full transition-all duration-300 hover:-translate-y-1'>
                         <h1 className='font-semibold text-3xl'>{days_since_contact}</h1>
                         <span className='text-[#64748B]'>Days Since Contact</span>
                     </div>
-                    <div className='p-8 text-center shadow-sm w-full'>
+                    <div className='p-8 text-center shadow-sm w-full transition-all duration-300 hover:-translate-y-1'>
                         <h1 className='font-semibold text-3xl'>{goal}</h1>
                         <span className='text-[#64748B]'>Goal(Days)</span>
                     </div>
-                    <div className='p-8 text-center shadow-sm w-full'>
+                    <div className='p-8 text-center shadow-sm w-full transition-all duration-300 hover:-translate-y-1'>
                         <h1 className='font-semibold text-3xl'>{next_due_date}</h1>
                         <span className='text-[#64748B]'>Next Due </span>
                     </div>
