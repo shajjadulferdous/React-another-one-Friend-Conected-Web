@@ -12,13 +12,17 @@ const router = createBrowserRouter([
        children:[
          {
             path:'/',
-            loader:()=>fetch('/data.json'),
+              loader:async ()=>{
+              await new Promise((x) => setTimeout(x , 800));
+              return fetch('/data.json')},
             Component:Home
          },
          {
              path:'/friend/:userId',
-             loader:()=>fetch('/data.json'),
-             Component:FriendDetails
+              loader:async ()=>{
+              await new Promise((x) => setTimeout(x , 800));
+              return fetch('/data.json')},
+              Component:FriendDetails
          },
          {
             path:'/timeline',
@@ -27,7 +31,6 @@ const router = createBrowserRouter([
          {
            path:'/analysis',
            Component:StatisPage
-
          }
        ]
      },
