@@ -16,11 +16,11 @@ const Navbar = () => {
             </div>
             <div className="flex-none pt-2">
                 <ul className="flex pr-3 gap-4 md:gap-8">
-                 <li><NavLink className={`flex justify-center items-center gap-1`}>
+                 <li><NavLink to={'/'} className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`}>
                     <IoMdHome />
                     Home</NavLink></li>
-                 <li><NavLink className={`flex justify-center items-center gap-1`} to={`/timeline`}> <IoTimeOutline /> Timeline</NavLink></li>
-                 <li><NavLink className={`flex justify-center items-center gap-1`} to={'/analysis'}> <ImStatsDots /> Stats</NavLink></li>
+                 <li><NavLink className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`} to={`/timeline`}> <IoTimeOutline /> Timeline</NavLink></li>
+                 <li><NavLink className={({isActive})=>`flex justify-center items-center gap-1 ${isActive ? 'bg-[#244D3F] btn text-white px-4 py-3' : ''}`} to={'/analysis'}> <ImStatsDots /> Stats</NavLink></li>
                 </ul>
             </div>
          </div>
