@@ -14,17 +14,8 @@ const Navbar = () => {
          </>
     return (
        <>
-         {/* <div className="flex w-full bg-base-100 shadow-sm py-3">
-            <div className="flex-1">
-                
-            </div>
-            <div className="flex-none pt-2">
-                <ul className="flex pr-3 gap-4 md:gap-8">
-               
-                </ul>
-            </div>
-         </div> */}
-         <div className="navbar bg-base-100 shadow-sm">
+        
+         <div className="navbar bg-base-100 shadow-sm sm:sticky top-0 z-1">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost sm:hidden">

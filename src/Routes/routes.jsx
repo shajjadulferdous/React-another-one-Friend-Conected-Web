@@ -26,10 +26,18 @@ const router = createBrowserRouter([
          },
          {
             path:'/timeline',
+            loader:async ()=>{
+               await new Promise((x) => setTimeout(x , 800));
+               return null;
+             },
             Component:TimeLine
          },
          {
            path:'/analysis',
+            loader:async ()=>{
+               await new Promise((x) => setTimeout(x , 800));
+               return null;
+             },
            Component:StatisPage
          }
        ]
