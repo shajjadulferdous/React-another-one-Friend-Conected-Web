@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import SmallCard from './SmallCard';
+import Banner from './Banner';
 
 const Home = () => {
     const data = useLoaderData();
@@ -13,6 +14,7 @@ const Home = () => {
                <div className='flex justify-center items-center'>
                    <button className='btn bg-[#244D3F] text-white rounded-sm'>+ Add a Friend</button>
                </div>
+               <Banner></Banner>
                <div className='font-semibold text-2xl mb-4'>
                   Your Friend
                </div>
